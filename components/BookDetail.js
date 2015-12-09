@@ -31,12 +31,14 @@ var styles = StyleSheet.create({
 module.exports = React.createClass({
 	render: function(){
 		var book = this.props.book;
-		var imageURI = (typeof book.volumeInfo.imageLinks !== 'undefinde') ? book.volumeInfo.imageLinks.thumbnail : '';
+		console.log(book);
+		
+		var imageURI = (typeof book.volumeInfo.imageLinks !== 'undefined') ? book.volumeInfo.imageLinks.thumbnail : null;
 		var description = (typeof book.volumeInfo.description !== 'undefined') ? book.volumeInfo.description : '';
     return (
       <View style={styles.container}>
         <Image style={styles.image} source={{uri: imageURI}} />
-          <Text style={styles.description}>{description}</Text>
+        <Text style={styles.description}>{description}</Text>
       </View>
     );
 	}
