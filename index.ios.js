@@ -28,7 +28,7 @@ var ReactNativeTour = React.createClass({
         <TabBarIOS.Item 
           selected={this.state.selectedTab === 'featured'} 
           title="Featured"
-          // systemIcon="featured"
+          systemIcon="featured"
           onPress={() => {
             this.setState({
               selectedTab: 'featured'
@@ -40,7 +40,7 @@ var ReactNativeTour = React.createClass({
         <TabBarIOS.Item 
           selected={this.state.selectedTab === 'search'} 
           title="Search"
-          // systemIcon="search"
+          systemIcon="search"
           onPress={() => {
             this.setState({
               selectedTab: 'search'
